@@ -50,10 +50,11 @@ class Solution
              if(k==i)
                 break;
             arr[p]=arr[k];
+             p=k;
            }
-           p=k;
+           arr[p]=temp;
        }
-       arr[p]=temp;
+      
     }
     static int gcd(int d,int n)
     {
