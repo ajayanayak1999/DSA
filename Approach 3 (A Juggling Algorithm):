@@ -1,0 +1,28 @@
+Let arr[] = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12} and d = 3
+
+First step:
+        => First set is {1, 4, 7, 10}.
+        => Rotate this set by one position to the left.
+        => This set becomes {4, 7, 10, 1}
+        => Array arr[] = {4, 2, 3, 7, 5, 6, 10, 8, 9, 1, 11, 12}
+
+Second step:
+        => Second set is {2, 5, 8, 11}.
+        => Rotate this set by one position to the left.
+        => This set becomes {5, 8, 11, 2}
+        => Array arr[] = {4, 5, 3, 7, 8, 6, 10, 11, 9, 1, 2, 12}
+
+Third step:
+        => Third set is {3, 6, 9, 12}.
+        => Rotate this set by one position to the left.
+        => This set becomes {6, 9, 12, 3}
+        => Array arr[] = {4, 5, 6, 7, 8, 9, 10, 11, 12, 1, 2, 3}
+
+Follow the steps below to solve the given problem. 
+
+Perform d%n in order to keep the value of d within the range of the array where d is the number of times the array is rotated and N is the size of the array.
+Calculate the GCD(N, d) to divide the array into sets.
+Run a for loop from 0 to the value obtained from GCD.
+Store the value of arr[i] in a temporary variable (the value of i denotes the set number).
+Run a while loop to update the values according to the set.
+After exiting the while loop assign the value of arr[j] as the value of the temporary variable (the value of j denotes the last element of the ith set).
