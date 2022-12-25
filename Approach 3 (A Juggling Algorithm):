@@ -26,3 +26,40 @@ Run a for loop from 0 to the value obtained from GCD.
 Store the value of arr[i] in a temporary variable (the value of i denotes the set number).
 Run a while loop to update the values according to the set.
 After exiting the while loop assign the value of arr[j] as the value of the temporary variable (the value of j denotes the last element of the ith set).
+
+class Solution
+{
+    //Function to rotate an array by d elements in counter-clockwise direction. 
+    static void rotateArr(int arr[], int d, int n)
+    {
+       d=d%n;
+       int i;
+       int p;
+       int k;
+       int temp;
+       int gcdValue=gcd(d,n);
+       for(i=0;i<gcdValue;i++)
+       {
+           temp=arr[i];
+           p=i;
+           while(true)
+           {
+             k=p+d;
+             if(k>=n)
+                 k=k-n;
+             if(k==i)
+                break;
+            arr[p]=arr[k];
+           }
+           p=k;
+       }
+       arr[p]=temp;
+    }
+    static int gcd(int d,int n)
+    {
+        if(n==0)
+        return d;
+       else
+       return gcd(n,d%n);
+    }
+}
