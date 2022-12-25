@@ -1,0 +1,33 @@
+class Complete{
+    
+   
+    // Function for finding maximum and value pair
+    public static int[] Rearrange (int arr[], int n) {
+        // Complete the function
+        int i,j,temp;
+        
+        for(i=0;i<n;i++)
+        {
+            for(j=0;j<n;j++)
+            {
+                if(arr[j]==i)
+                {
+                    temp=arr[j];
+                    arr[j]=arr[i];
+                    arr[i]=temp;
+                    break;
+                }
+            }
+        }
+        for(i=0;i<n;i++)
+        {
+            if(arr[i]!=i)
+            {
+                arr[i]=-1;
+            }
+        }
+        return arr;
+    }
+    
+    
+}
