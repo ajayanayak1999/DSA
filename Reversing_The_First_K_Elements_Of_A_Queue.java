@@ -66,7 +66,7 @@ public class Reversing_The_First_K_Elements_Of_A_Queue {
         q.add(90);
         q.add(100);
 
-        Queue<Integer> q1 = reveseFirst_K_Elements2(q, 5);
+        Queue<Integer> q1 = reveseFirst_K_Elements1(q, 5);
         if (q1 != null) {
             while (!q1.isEmpty()) {
                 System.out.print(q1.remove() + " ");
